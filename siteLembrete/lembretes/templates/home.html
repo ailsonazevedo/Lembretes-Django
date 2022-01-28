@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title>Título da página</title>
+    <title>Seus Lembretes</title>
     <meta charset="utf-8">
 
     
@@ -50,7 +50,7 @@
       <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
           <div>
-            <h3 class="float-md-start mb-0">Cover</h3>
+            <h3 class="float-md-start mb-0">Lembretes</h3>
             <nav class="nav nav-masthead justify-content-center float-md-end">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
               <a class="nav-link" href="#">Features</a>
@@ -63,12 +63,39 @@
           <h1>Cover your page.</h1>
           <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
           <p class="lead">
-            <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
+            <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Criar Lembrete</a>
           </p>
         </main>
+
+        <div class="album py-5 bg-light">
+          <div class="container">
+  
+            <div class="row">
+              {% for i in Lembrete%}
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" src="/media/{{i.foto_projeto}}" alt="logo-projeto" style="max-height: 225px; max-width: 100%; display: block;"> 
+                  <div class="card-body">
+                    <p class="card-text">{{i.nome}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <a href="{% url 'ferramentas' i.id%}" class="btn btn-sm btn-outline-secondary">Abrir</a>
+                        
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+                      </div>
+                      <!--<small class="text-muted">{{i.nome}}</small>-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
       
         <footer class="mt-auto text-white-50">
-          <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+          <!--<p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p> -->
         </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
