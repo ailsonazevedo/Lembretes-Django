@@ -55,40 +55,76 @@
             </nav>
           </div>
         </header>
-      
-        <main class="px-3">
-          <h1>Cover your page.</h1>
-          <p class="lead">Cover is a one-page template for building simple and beautiful home pages.</p>
-          <p class="lead">
-            <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Criar Lembrete</a>
-          </p>
-        </main>
+        
+        <main role="main">
 
-        <div class="album py-5 bg-dark">
-          <div class="container">
-  
-            <div class="row">
-              {% for i in Lembrete%}
-              <div class="col-md-4">
-                    <p>{{i.nome}}</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <!--<a href="{% url 'ferramentas' i.id%}" class="btn btn-sm btn-outline-secondary">Abrir</a>-->   
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                      </div>
-                      <!--<small class="text-muted">{{i.nome}}</small>-->
+            <section class="jumbotron text-center">
+              <div class="container">
+                <h1 class="jumbotron-heading">Perfil</h1>
+              </div>
+            </section>
+             <div class="container">
+               <div class="row">
+      
+                <div class="col-md-5" style="margin:0 2rem 0 4rem;">
+                  <img id="img-perfil" class="featurette-image img-fluid " alt="profilepic" style="max-width: 250px; max-height: 250px; border-radius:50%;" src="/media/{{usuario.foto_perfil}}">
+                </div>
+           
+                <form method="post">
+                   
+                  {% csrf_token %} {{ form.as_p }}
+                  <div class="form-row">
+                    <div class="form-group col-md-10">
+                      <label for="inputAddress">Nome</label>
+                      <input type="text" class="form-control" id="inputName" placeholder="{{usuario.nome}}">
                     </div>
-              {% endfor %}
-            </div>
-          </div>
-        </div>   
-        <footer class="mt-auto text-white-50">
-          <!--<p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p> -->
-        </footer>
+                    <div class="form-group col-md-10">
+                      <label for="inputEmail4">Email</label>
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="{{usuario.email}}">
+                    </div>       
+                  </div>
+      
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputAddress">Endereço</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="{{usuario.endereco}}">
+                    </div>
+      
+                    <div class="form-group col-md-4">
+                      <label for="inputCity">Cidade</label>
+                      <input type="text" class="form-control" id="inputCity" placeholder="{{usuario.cidade}}">
+                    </div>
+                  </div>     
+      
+                  <div class="form-row">
+           
+                    <div class="form-group col-md-6">
+                      <label for="inputState">Estado</label>
+                      <input id="inputState" class="form-control" placeholder="{{usuario.estado}}">
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputZip">Cep</label>
+                      <input type="text" class="form-control" id="inputCep" placeholder="{{usuario.cep}}">
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+                    
+                </div>
+             </div>
+      
+          </main>
+        
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
+
+  <footer class="mt-auto text-white-50">
+      <p>teste</p>
+    <!--<p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p> -->
+  </footer>
 
 </html>
