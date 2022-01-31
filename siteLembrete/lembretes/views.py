@@ -13,3 +13,11 @@ def home(request):
     }
 
     return render(request, "home.html", lembrete)
+
+
+def perfil(request):
+    perfil = Perfil.objects.all()
+    perfil = {
+        'perfil': perfil
+    }
+    return render (request, "perfil.html")

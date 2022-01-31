@@ -10,6 +10,10 @@ class Lembrete (models.Model):
     def __str__(self):
         return (self.nome)
 
+class Perfil(models.Model):
+    nome = models.CharField(max_length=200)
+    email = models.CharField(max_length=200, null= True)
+
 
 
 
