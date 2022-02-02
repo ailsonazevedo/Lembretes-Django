@@ -10,8 +10,8 @@
     <meta name="generator" content="Hugo 0.88.1">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
 
-    <!-- Bootstrap core CSS 
-<link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <!-- Bootstrap core CSS -->
+<link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -42,48 +42,55 @@
     <link href="{% static './css/cover.css' %}" rel="stylesheet">
 
   </head>
-    <body class="d-flex h-100 text-center text-white bg-dark">
+
+  <body class="d-flex h-100 text-center text-white bg-dark">
     
-      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="mb-auto">
-          <div>
-            <h3 class="float-md-start mb-0">Lembretes</h3>
-            <nav class="nav nav-masthead justify-content-center float-md-end">
-              <a class="nav-link active" aria-current="page" href="{%url 'home'%}">Meus lembretes</a>
-              <a class="nav-link" href="#">Features</a>
-              <a class="nav-link" href="{%url 'perfil'%}">Perfil</a>
-            </nav>
-          </div>
-        </header>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <h3 class="float-md-start mb-0">Lembretes</h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a class="nav-link active" aria-current="page" href="{%url 'home'%}">Meus lembretes</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="{%url 'perfil'%}">Perfil</a>
+          </nav>
+        </div>
+      </header>
       
         <main class="px-3">
           <h1>Cover your page.</h1>
           <p class="lead">Cover is a one-page template for building simple and beautiful home pages.</p>
           <p class="lead">
-            <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Criar Lembrete</a>
+          <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Criar Lembrete</a>
           </p>
         </main>
-
-        <div class="">
+      
+        <div class="album py-5 bg-light">
           <div class="container">
   
             <div class="row">
-              {% for i in Lembretes %}
-              <div class="col-md-4">
-                    <p>{{i.nome}}</p>
+              {% for i in lembretes %}
+                <div class="col-md-4">
+                  <p>{{i.nome}}</p>
+                </div>      
               {% endfor %}
             </div>
-          </div>
-        </div>   
 
+          </div>
+        </div> 
+
+    
+    
+    <footer class="mt-auto text-white-50">
+      <!--<p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p> -->
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
   </body>
 
-  <footer class="mt-auto text-white-50">
-    <!--<p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p> -->
-  </footer>
+
 
 </html>
