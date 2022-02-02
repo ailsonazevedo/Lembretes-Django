@@ -63,21 +63,25 @@
           <p class="lead">
           <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Criar Lembrete</a>
           </p>
+
+
+          <div class="album py-5 bg-light">
+            <div class="container">
+    
+              <div class="row">
+                {% for i in lembretes %}
+                  <div class="col-md-4">
+                    <p>{{i.nome}}</p>
+                  </div>      
+                {% endfor %}
+              </div>
+  
+            </div>
+          </div> 
+
         </main>
       
-        <div class="album py-5 bg-light">
-          <div class="container">
-  
-            <div class="row">
-              {% for i in lembretes %}
-                <div class="col-md-4">
-                  <p>{{i.nome}}</p>
-                </div>      
-              {% endfor %}
-            </div>
 
-          </div>
-        </div> 
 
     
     
