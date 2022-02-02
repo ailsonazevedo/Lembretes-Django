@@ -51,7 +51,7 @@
             <nav class="nav nav-masthead justify-content-center float-md-end">
               <a class="nav-link active" aria-current="page" href="{%url 'home'%}">Meus lembretes</a>
               <a class="nav-link" href="#">Features</a>
-              <a class="nav-link" href="#">Perfil</a>
+              <a class="nav-link" href="{%url 'perfil'%}">Perfil</a>
             </nav>
           </div>
         </header>
@@ -64,31 +64,26 @@
           </p>
         </main>
 
-        <div class="album py-5 bg-dark">
+        <div class="">
           <div class="container">
   
             <div class="row">
-              {% for i in Lembrete%}
+              {% for i in Lembretes %}
               <div class="col-md-4">
                     <p>{{i.nome}}</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <!--<a href="{% url 'ferramentas' i.id%}" class="btn btn-sm btn-outline-secondary">Abrir</a>-->   
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                      </div>
-                      <!--<small class="text-muted">{{i.nome}}</small>-->
-                    </div>
               {% endfor %}
             </div>
           </div>
         </div>   
-        <footer class="mt-auto text-white-50">
-          <!--<p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p> -->
-        </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
+
+  <footer class="mt-auto text-white-50">
+    <!--<p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p> -->
+  </footer>
 
 </html>

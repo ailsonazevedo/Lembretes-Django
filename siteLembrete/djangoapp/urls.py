@@ -18,14 +18,14 @@ from django.urls import path
 from lembretes.views import home
 from django.conf.urls.static import static
 from django.conf import settings
-#from perfil.views import perfil
+from lembretes.views import perfil
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name="home"),
-    #path('perfil', perfil, name="perfil")
+    path('perfil', perfil, name="perfil")
 ]
 
 
