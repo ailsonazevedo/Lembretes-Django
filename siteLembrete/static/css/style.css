@@ -1,0 +1,27 @@
+.conteudo-lembrete{
+    padding: 7px;
+    margin-bottom: 7px;
+    margin-left: 0px;
+    margin-right: -6px;
+    border-style: groove;
+    border-color: white;
+    justify-content: center;
+}
+
+
+
+.data-lembrete{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+.nome-lembrete{
+    text-decoration: none;
+    text-align: center;
+    color: whitesmoke;
+}
+
+
+.descricao-lembrete{
+    text-decoration: none;
+}
