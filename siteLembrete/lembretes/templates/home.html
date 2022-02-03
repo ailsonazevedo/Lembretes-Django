@@ -65,13 +65,17 @@
           </p>
 
 
-          <div class="album py-5 bg-light">
-            <div class="container">
+          <div class="album py-4 bg-dark">
+            <div class="container-fluid">
     
               <div class="row">
-                {% for i in lembretes %}
+                {% for i in lembrete %}
                   <div class="col-md-4">
-                    <p>{{i.nome}}</p>
+                    <div class="border border-2">
+                      <h2>{{i.nome}}</h2>
+                      <p>{{i.descricao}}</p>
+                      <a>{{i.data_lembrete}}</a>
+                    </div>
                   </div>      
                 {% endfor %}
               </div>
