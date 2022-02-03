@@ -4,16 +4,12 @@
     margin-left: 0px;
     margin-right: -6px;
     border-style: groove;
-    border-color: white;
+    border-color: rgb(122, 122, 122);
     justify-content: center;
+    align-items: center;
+    
 }
 
-
-
-.data-lembrete{
-    text-decoration: none;
-    color: antiquewhite;
-}
 
 .nome-lembrete{
     text-decoration: none;
@@ -24,4 +20,11 @@
 
 .descricao-lembrete{
     text-decoration: none;
+    font-size: 1rem;
+}
+
+.data-lembrete{
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 0.8rem;
 }
