@@ -20,6 +20,10 @@ class Lembrete (models.Model):
     usuario = models.ForeignKey(User,on_delete=models.CASCADE, null=True)
     #perfil = models.ForeignKey(Perfil,on_delete=models.CASCADE, null=True)
 
+    class Meta:
+        db_table = 'lembrete'
+
+
     def __str__(self):
         return (self.nome)
 
