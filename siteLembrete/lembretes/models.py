@@ -13,9 +13,9 @@ class Perfil(models.Model):
 
 class Lembrete (models.Model):
     nome = models.CharField(max_length=180)
-    descricao = models.CharField(max_length=300)
+    descricao = models.CharField(verbose_name='Descrição',max_length=300, blank=True)
     data_lembrete = models.DateTimeField(verbose_name='Data do Lembrete', null=True)
-    data_criacao = models.DateTimeField('Data de Criação', auto_now_add=True, null=True)
+    data_criacao = models.DateTimeField('Data de Criação', auto_now_add=True, null=True, editable=False)
     file = models.FileField(upload_to="media/", null=True, blank=True)
     concluido = models.BooleanField(default=False)
     usuario = models.ForeignKey(User,on_delete=models.CASCADE, null=True)
