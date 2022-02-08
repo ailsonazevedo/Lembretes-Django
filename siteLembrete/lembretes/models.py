@@ -12,11 +12,12 @@ class Perfil(models.Model):
 
 
 class Lembrete (models.Model):
-    nome = models.CharField(max_length=200)
+    nome = models.CharField(max_length=180)
     descricao = models.CharField(max_length=300)
     data_lembrete = models.DateTimeField(verbose_name='Data do Lembrete', null=True)
+    data_criacao = models.DateTimeField('Data de Criação', auto_now_add=True, null=True)
     file = models.FileField(upload_to="media/", null=True, blank=True)
-    ativo = models.BooleanField(default=False)
+    concluido = models.BooleanField(default=False)
     usuario = models.ForeignKey(User,on_delete=models.CASCADE, null=True)
     #perfil = models.ForeignKey(Perfil,on_delete=models.CASCADE, null=True)
 
