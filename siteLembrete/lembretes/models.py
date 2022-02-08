@@ -17,7 +17,7 @@ class Lembrete (models.Model):
     data_lembrete = models.DateTimeField(verbose_name='Data do Lembrete', null=True)
     data_criacao = models.DateTimeField('Data de Criação', auto_now_add=True, null=True, editable=False)
     file = models.FileField(upload_to="media/", null=True, blank=True)
-    concluido = models.BooleanField(default=False)
+    concluido = models.BooleanField('Concluído',default=False)
     usuario = models.ForeignKey(User,on_delete=models.CASCADE, null=True)
     #perfil = models.ForeignKey(Perfil,on_delete=models.CASCADE, null=True)
 
