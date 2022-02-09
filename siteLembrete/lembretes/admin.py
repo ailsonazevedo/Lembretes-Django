@@ -6,7 +6,7 @@ from .models import *
 
 class LembreteAdmin(admin.ModelAdmin):
     list_display = ('nome','descricao' ,'data_lembrete', 'data_criacao', 'concluido')
-    #list_filter = ('data_lembrete', 'data-criacao')
+    list_filter = (('concluido', admin.BooleanFieldListFilter),('nome'),('data_criacao'),('data_lembrete'))
 
 # Register your models here.
 
